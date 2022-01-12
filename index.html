@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ice Cream</title>
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(248, 219, 219) 0%,
+          rgb(229, 248, 250) 90%
+        );
+        padding: 5% 10%;
+        border: 10px solid #fff;
+        border-radius: 10px;
+        border-width: 5px;
+      }
+
+      h1 {
+        border: 10px solid #fff;
+        border-radius: 4px;
+        padding: 10px 30px;
+        color: rgb(213, 155, 246);
+        text-align: center;
+        font-size: 45px;
+        font-weight: 400;
+      }
+
+      h2 {
+        color: rgb(213, 155, 246);
+        text-align: center;
+        font-size: 25px;
+        padding: 10px 10px 20px 10px;
+        font-weight: 400;
+      }
+
+      p {
+        text-align: center;
+        margin: 20px 15px;
+        line-height: 2;
+        font-size: 15px;
+        padding: 15px;
+      }
+
+      img {
+        display: block;
+        max-width: 25%;
+        margin: auto;
+        border-radius: 12px;
+      }
+
+      button {
+        color: #d59bf6;
+        display: block;
+        font-size: 20px;
+        background-color: #fff;
+        border: none;
+        border-radius: 30px;
+        padding: 20px 40px;
+        margin: 0 auto;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        transition: all 200ms ease-in-out;
+      }
+
+      button:hover {
+        color: #fff;
+        background-color: #d59bf6;
+        cursor: pointer;
+      }
+
+      .wholePage {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        max-width: 80%;
+        margin: auto;
+        padding: 5%;
+      }
+
+      .learnMore {
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        font-size: 15px;
+        margin: 20px 10px;
+        color: #9896f1;
+      }
+
+      .learnMore:hover {
+        text-decoration: underline;
+      }
+
+      .name {
+        display: block;
+        text-align: center;
+        margin: 20px;
+        font-size: 15px;
+        color: rgb(0, 0, 0, 0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wholePage">
+      <h1>🍦 I Love Ice Cream 🍦</h1>
+      <h2>
+        I love to eat any and all ice creams because they are all just too good
+        to resist.
+      </h2>
+      <hr />
+      <p>
+        <strong>Ice cream</strong> is a <em> sweetened</em> frozen food
+        typically eaten as a snack or dessert. It may be made from dairy milk or
+        cream and is flavoured with a sweetener, either sugar or an alternative,
+        and a spice, such as cocoa or vanilla, or with fruit such as
+        strawberries or peaches. It can also be made by whisking a flavored
+        cream base and liquid nitrogen together.
+      </p>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/018/350/original/leighann-blackwood--cQ2kQqpEB8-unsplash.jpg?1633491421"
+      />
+      <a
+        href="https://en.wikipedia.org/wiki/Ice_cream"
+        target="_blank"
+        alt="vanilla ice cream"
+        class="learnMore"
+      >
+        Learn more on Wikipedia
+      </a>
+      <button>Try Ice Cream</button>
+      <br />
+      <span class="name"> This page was built by Elina Kostiainen </span>
+    </div>
+    <script>
+      function tryButton() {
+        let name = prompt("What is your name?");
+        let email = prompt("What is your email?");
+        let favouriteIceCream = prompt(
+          "What is your favourite ice cream flavour?"
+        );
+        favouriteIceCream = favouriteIceCream.toLowerCase();
+        if (
+          favouriteIceCream === "vanilla" ||
+          favouriteIceCream === "chocolate" ||
+          favouriteIceCream === "strawberry"
+        ) {
+          alert(
+            "Thanks " +
+              name +
+              "." +
+              " We will be in touch. In the mean time keep calm and enjoy one of the classics, " +
+              favouriteIceCream +
+              " ice cream! 🙌"
+          );
+        } else {
+          alert(
+            "Thanks " +
+              name +
+              "." +
+              " We will be in touch. In the mean time keep calm and enjoy your " +
+              favouriteIceCream +
+              " ice cream! 😋"
+          );
+        }
+      }
+      let button = document.querySelector("button");
+      button.addEventListener("click", tryButton);
+    </script>
+  </body>
+</html>
